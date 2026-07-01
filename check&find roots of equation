@@ -1,0 +1,37 @@
+[24bcs105@mepcolinux exp2]$cat pgr2.c
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+   double a,b,c,d,R,Im,r1,r2;
+   printf("Enter 3 values of the quadratic equation:\n");
+   scanf("%lf%lf%lf",&a,&b,&c);
+   d=(pow(b,2)-4*a*c);
+   if(d>0)
+   {
+      r1=((-b+sqrt(d))/2*a);
+      r2=((-b-sqrt(d))/2*a);
+      printf("The roots are real and unequal\n");
+      printf("%2f,%2f\t are roots of equation",r1,r2);
+   }
+   else if (d==0)
+   {
+      r1=r2=(-b/(2*a));
+      printf("The roots are real and equal\n");
+      printf("%2f,%2f\t are roots of equation",r1,r2);
+   }
+   else
+   {
+      R=(-b/(2*a));
+      Im=(sqrt(-d)/(2*a));
+      printf("The roots are imaginary\n");
+      printf("%2f+%2fi,%2f-%2fi\t are roots of equation",R,Im,R,Im);
+   }
+   return 0;
+}
+
+[24bcs105@mepcolinux exp2]$./2_output
+Enter 3 values of the quadratic equation:
+1 2 5
+The roots are imaginary
+-1.000000+2.000000i,-1.000000-2.000000i  are roots of equation
