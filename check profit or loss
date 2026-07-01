@@ -1,0 +1,18 @@
+[24bcs105@mepcolinux exp2]$cat pgr5.c
+#include<stdio.h>
+int main()
+{
+   int sp,bp;
+   printf("Enter selling price and cost of product:");
+   scanf("%d%d",&sp,&bp);
+   if(sp>bp)
+      printf("There is a profit");
+   else if(sp==bp)
+      printf("There is no loss or profit");
+   else
+      printf("There is a loss");
+   return 0;
+}
+[24bcs105@mepcolinux exp2]$./5_output
+Enter selling price and cost of product:500 400
+There is a profit
