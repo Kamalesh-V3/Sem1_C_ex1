@@ -1,0 +1,34 @@
+[24bcs105@mepcolinux exp2]$cat pgr3.c
+#include<stdio.h>
+int main()
+{
+   char a;
+   printf("Enter a character:\n");
+   scanf("%c",&a);
+   if (a>='0'&&a<='9')
+   {
+      printf("%c is a number",a);
+   }
+   else if(a>='a'&&a<='z'||a>='A'&&a<='Z')
+   {
+    printf("%c is an alphabet",a);
+    if(a=='a'||a=='A'||a=='e'||a=='E'||a=='i'||a=='I'||a=='o'||a=='O'||a=='u'||a=='U')
+    {
+       printf("%c is a vowel",a);
+    }
+    else
+    {
+       printf("%c is a consonant",a);
+    }
+   }
+    else
+    {
+       printf("%c is a special character",a);
+    }
+    return 0;
+   }
+
+[24bcs105@mepcolinux exp2]$./3_output
+Enter a character:
+b
+b is an alphabetb is a consonant
